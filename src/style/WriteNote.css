@@ -1,0 +1,16 @@
+.PostNote p:focus {
+    outline: auto white;
+}
+.PostNote span:focus {
+    outline: auto #4b453c;
+}
+.WriteNote span {display: block;}
+.PostNote button {
+    background-color: white;
+    border: none;
+    border-radius: .3rem;
+    color: #4b453c;
+    font-size: 1rem;
+    padding: .2rem .7rem;
+    margin-top: .8rem;
+}

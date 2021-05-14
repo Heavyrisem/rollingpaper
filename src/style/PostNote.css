@@ -1,0 +1,76 @@
+.PostNote {
+    padding: 35px 20px;
+    padding-bottom: 25rem;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 550px;
+    margin: 1rem 0;
+    position: relative;
+    font-size: 24px;
+    vertical-align: top;
+    display: inline-block;
+    font-family: Englebert, Arial;
+    color: #4b453c;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    line-height: 34px;
+    text-align: center;
+    word-break: keep-all;
+
+    background-size: 100%;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+.PostNote span {
+    color: white;
+}
+
+.PostNote::before {
+    display: block;
+    content: "";
+    background: rgba(227, 200, 114, 0.4);
+    width: 130px;
+    height: 28px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 6px/18px 0;
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-2deg);
+}
+
+.H9a95cd {
+    background-color: #9a95cd;
+    background-image: url('../img/9a95cd.png');
+}
+.Haf98cd {
+    background-color: #af98cd;
+    background-image: url('../img/af98cd.png');
+}
+.Hc3d38e {
+    background-color: #c3d38e;
+    background-image: url('../img/c3d38e.png');
+}
+.Hcce3d3 {
+    background-color: #cce3d3;
+    background-image: url('../img/cce3d3.png');
+}
+.Hecb497 {
+    background-color: #ecb497;
+    background-image: url('../img/ecb497.png');
+}
+.Hf4b7b4 {
+    background-color: #f4b7b4;
+    background-image: url('../img/f4b7b4.png');
+}
+
+
+@media screen and (max-width: 960px) {
+    .PostNote {
+        padding-bottom: 25rem;
+    }
+}
+@media screen and (max-width: 480px) {
+    .PostNote {
+        padding-bottom: 22rem;
+    }
+}

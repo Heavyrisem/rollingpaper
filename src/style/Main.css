@@ -1,0 +1,29 @@
+.Main {
+    margin: auto;
+    width: 93%;
+    column-count: 4;
+    column-gap: 2rem;
+    padding: 3rem 1rem;
+
+    box-sizing: border-box;
+    overflow: scroll;
+}
+
+
+
+
+@media screen and (max-width: 1280px) {
+    .Main {
+        column-count: 3;
+    }
+}
+@media screen and (max-width: 960px) {
+    .Main {
+        column-count: 2;
+    }
+}
+@media screen and (max-width: 480px) {
+    .Main {
+        column-count: 1;
+    }
+}
