@@ -18,6 +18,9 @@
     background-size: 100%;
     background-position: center bottom;
     background-repeat: no-repeat;
+
+    animation-duration: 1s;
+    animation-name: Appear;
 }
 .PostNote span {
     color: white;
@@ -60,6 +63,17 @@
 .Hf4b7b4 {
     background-color: #f4b7b4;
     background-image: url('../img/f4b7b4.png');
+}
+
+@keyframes Appear {
+    from {
+        transform: translateY(20px);
+        opacity: 0.2;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
 }
 
 

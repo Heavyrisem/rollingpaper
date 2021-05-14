@@ -17,6 +17,11 @@ Server.use(express.static('../build'));
 Server.put('/UploadNote', async (req, res) => {
     if (req.body.author && req.body.description) {
         let DB = await DB_Client.db();
+
+        let Check: DB_Note | null = await DB.collection('Notes').findOne({author: req.body.author});
+        if (Check) {
+            if (Check.description == req.body.description) return res.send({status: 1});
+        }
         
         if (await (await DB.collection('Notes').insertOne({author: req.body.author, description: req.body.description, ip: req.headers['x-forwarded-for'] || req.connection.remoteAddress})).result.ok) {
             res.send({status: 1});
