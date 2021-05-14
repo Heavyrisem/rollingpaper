@@ -19,6 +19,20 @@ class Main extends React.Component<any, SMain> {
 
 	componentDidMount() {
 		this.GetNotes();
+		
+		// Dark Mode
+		this.SwitchDarkMode(window.matchMedia('(prefers-color-scheme: dark)').matches);
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+			this.SwitchDarkMode(window.matchMedia('(prefers-color-scheme: dark)').matches);
+        })
+	}
+
+	SwitchDarkMode(isDark: boolean) {
+		if (isDark) {
+			document.documentElement.setAttribute("data-theme", "dark");
+		} else {
+			document.documentElement.setAttribute("data-theme", "light");
+		}
 	}
 
 	async GetNotes() {
