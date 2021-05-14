@@ -15,6 +15,9 @@ class Main extends React.Component<any, SMain> {
 		this.state = {
 			PostNotelist: []
 		}
+	}
+
+	componentDidMount() {
 		this.GetNotes();
 	}
 

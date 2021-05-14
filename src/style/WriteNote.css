@@ -14,3 +14,11 @@
     padding: .2rem .7rem;
     margin-top: .8rem;
 }
+
+
+[contenteditable=true]:empty:before{
+    content: attr(placeholder);
+}
+[contenteditable=true]:empty:focus:before{
+    content: "";
+}

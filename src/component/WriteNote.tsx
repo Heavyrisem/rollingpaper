@@ -29,8 +29,8 @@ class WriteNote extends React.Component<PWriteNote> {
         const color = colors[this.getRandomInt(0, colors.length)];
         return (
             <div className={"WriteNote PostNote" + (` H${color}`)} style={{transform: `rotate(${rotate}deg)`}}>
-                <p contentEditable suppressContentEditableWarning={true} ref={(e)=>this.Description=e}>편지를 작성해 주세요</p>
-                <span contentEditable suppressContentEditableWarning={true} ref={(e)=>this.Author=e}>이름</span>
+                <p contentEditable suppressContentEditableWarning={true} ref={(e)=>this.Description=e} placeholder="편지를 작성해 주세요"></p>
+                <span contentEditable suppressContentEditableWarning={true} ref={(e)=>this.Author=e} placeholder="이름"></span>
                 <button onClick={this.Submit.bind(this)}>전송</button>
             </div>
         )
