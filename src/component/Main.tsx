@@ -29,13 +29,13 @@ class Main extends React.Component<any, SMain> {
 		console.log(NotesResponse)
 		if (NotesResponse.ok) {
 			const Notes: Array<PNote> = await NotesResponse.json();
-			console.log(Notes)
+			// console.log(Notes)
 			this.setState({
 				PostNotelist: Notes
 			})
 		} else {
 			alert("서버 연결중 오류 발생");
-			console.log(NotesResponse.ok)
+			// console.log(NotesResponse.ok)
 		}
 	}
 
