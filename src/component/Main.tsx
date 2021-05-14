@@ -3,7 +3,7 @@ import '../style/Main.css';
 
 import PostNote, {PNote} from './PostNote';
 import WriteNote from './WriteNote';
-const Endpoint = "http://rollingpaper.heavyrisem.xyz";
+const Endpoint = "https://rollingpaper.heavyrisem.xyz";
 
 interface SMain {
 	PostNotelist: Array<PNote>

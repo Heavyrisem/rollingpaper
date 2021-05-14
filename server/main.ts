@@ -43,7 +43,7 @@ Server.get('/GetNotes', async (req, res) => {
 })
 
 
-Server.listen(80, async () => {
+Server.listen(6800, async () => {
     const DB_Config: mongo.MongoClientOptions = {
         useUnifiedTopology: true,
         poolSize: 10
