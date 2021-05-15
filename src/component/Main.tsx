@@ -87,7 +87,7 @@ class Main extends React.Component<any, SMain> {
 								<PostNote key={idx} description={Note.description} author={Note.author} />
 							))
 						}
-						<WriteNote Submit={this.Submit.bind(this)}/>
+						{/* <WriteNote Submit={this.Submit.bind(this)}/> */}
 				</div>
 				<Footer />
 			</>
