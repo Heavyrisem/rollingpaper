@@ -4,7 +4,7 @@ import Footer from './Footer';
 
 import PostNote, {PNote} from './PostNote';
 import WriteNote from './WriteNote';
-const Endpoint = "https://rollingpaper.heavyrisem.xyz";
+const Endpoint = "http://localhost:6800";
 
 interface SMain {
 	PostNotelist: Array<PNote>

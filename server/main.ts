@@ -3,7 +3,6 @@ import cors from 'cors';
 import * as mongo from 'mongodb';
 import DBConfig from './DB.json';
 import { DB_Note } from './Types';
-import { send } from 'process';
 
 let DB_Client: mongo.MongoClient;
 
@@ -44,10 +43,11 @@ Server.get('/GetNotes', async (req, res) => {
     if (HeaderNote) {Send[0] = HeaderNote}
 
     for (let i = 0; i < Notes.length; i++) {
+        if (Notes[i].header) continue;
         Send.push({author: Notes[i].author, description: Notes[i].description});
     }
-
-    res.send(Notes);
+    
+    res.send(Send);
 })
 
 

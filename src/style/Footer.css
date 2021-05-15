@@ -2,14 +2,14 @@ footer {
     text-align: center;
     margin-bottom: 2rem;
 
-    color: rgb(168, 168, 168);
+    color: var(--Footer-color);
 }
 
 
 
 :root {
-    --Footer-color: 
+    --Footer-color: rgb(168, 168, 168);
 }
 [data-theme="dark"] {
-    --background-color: rgb(78, 78, 78);
+    --Footer-color: rgb(209, 209, 209);
 }
