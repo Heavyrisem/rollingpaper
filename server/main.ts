@@ -3,6 +3,7 @@ import cors from 'cors';
 import * as mongo from 'mongodb';
 import DBConfig from './DB.json';
 import { DB_Note } from './Types';
+import { send } from 'process';
 
 let DB_Client: mongo.MongoClient;
 
@@ -36,12 +37,14 @@ Server.put('/UploadNote', async (req, res) => {
 Server.get('/GetNotes', async (req, res) => {
     let DB = await DB_Client.db();
 
+    let HeaderNote: DB_Note | null = await DB.collection('Notes').findOne({header: true});
     let Notes: Array<DB_Note> = await DB.collection('Notes').find({}).toArray();
 
     let Send: Array<{author: string, description: string}> = [];
+    if (HeaderNote) {Send[0] = HeaderNote}
 
     for (let i = 0; i < Notes.length; i++) {
-        Send[i] = {author: Notes[i].author, description: Notes[i].description};
+        Send.push({author: Notes[i].author, description: Notes[i].description});
     }
 
     res.send(Notes);

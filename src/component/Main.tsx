@@ -1,5 +1,6 @@
 import React from 'react';
 import '../style/Main.css';
+import Footer from './Footer';
 
 import PostNote, {PNote} from './PostNote';
 import WriteNote from './WriteNote';
@@ -79,14 +80,17 @@ class Main extends React.Component<any, SMain> {
 	render() {
 		return (
 			// <img src="https://g-grafolio.pstatic.net/20201122_59/1605973298374Sc0Lj_JPEG/20201121_233611.jpg" alt="" />
-			<div className="Main">
-					<WriteNote Submit={this.Submit.bind(this)}/>
-					{this.state.PostNotelist&&
-						this.state.PostNotelist.map((Note, idx) => (
-							<PostNote key={idx} description={Note.description} author={Note.author} />
-						))
-					}
-			</div>
+			<>
+				<div className="Main">
+						<WriteNote Submit={this.Submit.bind(this)}/>
+						{this.state.PostNotelist&&
+							this.state.PostNotelist.map((Note, idx) => (
+								<PostNote key={idx} description={Note.description} author={Note.author} />
+							))
+						}
+				</div>
+				<Footer />
+			</>
 		)
 	}
 }

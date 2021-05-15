@@ -21,7 +21,7 @@ class PostNote extends React.Component<PNote> {
         const rotate = this.getRandomInt(1, 3) * ((this.getRandomInt(0, 2))? -1:1);
         const color = colors[this.getRandomInt(0, colors.length)];
         return (
-            <div className={"PostNote" + (` H${color}`)} style={{transform: `rotate(${rotate}deg)`}}>
+            <div className={"PostNote"} style={{transform: `rotate(${rotate}deg)`, backgroundColor: `#${color}`}}>
                 <p>{this.props.description}</p>
                 <span>{this.props.author}</span>
             </div>

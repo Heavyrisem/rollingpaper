@@ -15,6 +15,7 @@
     text-align: center;
     word-break: keep-all;
 
+    background-image: url('../img/default.png');
     background-size: 100%;
     background-position: center bottom;
     background-repeat: no-repeat;
@@ -24,6 +25,13 @@
 }
 .PostNote span {
     color: white;
+}
+
+.PostNote *::selection {
+    background-color: rgba(255, 255, 255, 0.616);
+}
+.PostNote span::selection {
+    color: #4b453c;
 }
 
 .PostNote::before {
