@@ -3,7 +3,7 @@ version: "3"
 services:
   rollingpaper:
     container_name: rollingpaper_server
-    build: .
+    image: ghcr.io/heavyrisem/rollingpaper_server
     # ports:
     #   - 80:6800
     networks:
