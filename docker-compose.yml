@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  rollingpaper:
+    container_name: rollingpaper_server
+    build: .
+    # ports:
+    #   - 80:6800
+    networks:
+      - nginx
+
+networks:
+  nginx:
+    external: true
